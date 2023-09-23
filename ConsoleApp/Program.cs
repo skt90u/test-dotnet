@@ -1,4 +1,4 @@
-ï»¿using CommandLine.Text;
+using CommandLine.Text;
 using CommandLine;
 using System;
 using System.Collections.Generic;
@@ -17,15 +17,18 @@ namespace ConsoleApp
     {
         public class Options
         {
-            [Option('f', "file", Required = true, HelpText = "éœ€è¦å¤„ç†çš„æ–‡ä»¶ã€‚")]
+            [Option('f', "file", Required = true, HelpText = "»İ­n?²zªº¤å¥ó¡C")]
             public IEnumerable<string> Files { get; set; }
 
-            [Option('o', "override", Required = false, HelpText = "æ˜¯å¦è¦†ç›–åŸæœ‰æ–‡ä»¶ã€‚")]
+            [Option('o', "override", Required = false, HelpText = "¬O§_ÂĞ?­ì¦³¤å¥ó¡C")]
             public bool Override { get; set; }
         }
 
         static void Main(string[] args)
         {
+            //EntityFrameworkProfilerBootstrapper.PreStart();
+            HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
+
             var sb = new SqlConnectionStringBuilder();
 
             sb.DataSource = "DESKTOP-VQEUHM2\\SQLEXPRESS";
@@ -33,22 +36,30 @@ namespace ConsoleApp
             sb.IntegratedSecurity = true;
             var connStr = sb.ToString();
 
-            using (var db = new MyDbContext(connStr))
+            //using (var db = new MyDbContext(connStr))
+            //{
+            //    var count = db.Person.Count();
+            //    Console.WriteLine(count);
+            //}
+
+            using (var db = new AdventureWorks2022(connStr))
             {
-                var count = db.Person.Count();
+                var count = db.Sales_SpecialOffers.Count();
                 Console.WriteLine(count);
             }
+
             // Parser.Default.ParseArguments<Options>(args).WithParsed(Run);
         }
 
         private static void Run(Options option)
         {
-            // ä½¿ç”¨è§£æåçš„å‘½ä»¤è¡Œå‚æ•°è¿›è¡Œæ“ä½œã€‚
+            // ¨Ï¥Î¸ÑªR¦Zªº©R¥O¦æ???¦æ¾Ş§@¡C
             foreach (var file in option.Files)
             {
-                var verb = option.Override ? "è¦†ç›–" : "ä½¿ç”¨";
-                Console.WriteLine($"walterlv æ­£åœ¨{verb}æ–‡ä»¶ {file}");
+                var verb = option.Override ? "ÂĞ?" : "¨Ï¥Î";
+                Console.WriteLine($"walterlv ¥¿¦b{verb}¤å¥ó {file}");
             }
         }
     }
 }
+
