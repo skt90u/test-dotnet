@@ -14,7 +14,7 @@ using TestEntityFramework;
 
 namespace ConsoleApp
 {
-    class Program
+    partial class Program
     {
         public class Options
         {
