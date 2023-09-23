@@ -3,6 +3,7 @@ using CommandLine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
@@ -17,10 +18,10 @@ namespace ConsoleApp
     {
         public class Options
         {
-            [Option('f', "file", Required = true, HelpText = "»Ý­n?²zªº¤å¥ó¡C")]
+            [Option('f', "file", Required = true, HelpText = "ï¿½Ý­n?ï¿½zï¿½ï¿½ï¿½ï¿½ï¿½C")]
             public IEnumerable<string> Files { get; set; }
 
-            [Option('o', "override", Required = false, HelpText = "¬O§_ÂÐ?­ì¦³¤å¥ó¡C")]
+            [Option('o', "override", Required = false, HelpText = "ï¿½Oï¿½_ï¿½ï¿½?ï¿½ì¦³ï¿½ï¿½ï¿½C")]
             public bool Override { get; set; }
         }
 
@@ -53,11 +54,11 @@ namespace ConsoleApp
 
         private static void Run(Options option)
         {
-            // ¨Ï¥Î¸ÑªR¦Zªº©R¥O¦æ???¦æ¾Þ§@¡C
+            // ï¿½Ï¥Î¸ÑªRï¿½Zï¿½ï¿½ï¿½Rï¿½Oï¿½ï¿½???ï¿½ï¿½Þ§@ï¿½C
             foreach (var file in option.Files)
             {
-                var verb = option.Override ? "ÂÐ?" : "¨Ï¥Î";
-                Console.WriteLine($"walterlv ¥¿¦b{verb}¤å¥ó {file}");
+                var verb = option.Override ? "ï¿½ï¿½?" : "ï¿½Ï¥ï¿½";
+                Console.WriteLine($"walterlv ï¿½ï¿½ï¿½b{verb}ï¿½ï¿½ï¿½ {file}");
             }
         }
     }
