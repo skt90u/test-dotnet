@@ -27,6 +27,14 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
+            for(var i=0; i<10; i++)
+            {
+                var a = 1;
+                var b = 2;
+                var c = a + b;
+                Console.WriteLine(c);
+            }
+            
             //EntityFrameworkProfilerBootstrapper.PreStart();
             HibernatingRhinos.Profiler.Appender.EntityFramework.EntityFrameworkProfiler.Initialize();
 
