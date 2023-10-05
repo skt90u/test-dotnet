@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using Autofac.Core;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Data.Common;
 using System.Data.Entity;
@@ -61,15 +63,15 @@ namespace TestEntityFramework
         {
             DbInterception.Add(new MyCommandInterceptor());
 
-            var builder = CreateContainerBuilder();
+            var services = GetServiceCollection();
 
-            using (var container = builder.Build())
+            using (var provider = services.BuildServiceProvider())
             {
-                container.Resolve<DiExample>().Print();
+                provider.GetService<DiExample>().Print();
             }
         }
 
-        static ContainerBuilder CreateContainerBuilder()
+        static ServiceCollection GetServiceCollection()
         {
             var connectionString = new SqlConnectionStringBuilder
             {
@@ -78,14 +80,12 @@ namespace TestEntityFramework
                 IntegratedSecurity = true,
             }.ConnectionString;
 
-            var builder = new ContainerBuilder();
+            var services = new ServiceCollection();
 
-            // 順序可顛倒，但是相依的都必須要註冊到
-            builder.RegisterType<DiExample>();
+            services.AddTransient<DiExample>();
+            services.AddTransient<AdventureWorks2022>(_ => new AdventureWorks2022(connectionString));
 
-            builder.RegisterType<AdventureWorks2022>().WithParameter("connectionString", connectionString);
-
-            return builder;
+            return services;
         }
 
         public class DiExample
