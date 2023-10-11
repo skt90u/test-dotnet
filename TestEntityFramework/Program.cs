@@ -1,10 +1,7 @@
-﻿using Autofac;
-using Autofac.Core;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Scrutor;
 using System;
 using System.Data.Common;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Infrastructure.Interception;
 using System.Data.SqlClient;
 using System.Linq;
@@ -82,20 +79,34 @@ namespace TestEntityFramework
 
             var services = new ServiceCollection();
 
-            services.AddTransient<DiExample>();
+            // services.AddTransient<DiExample>();
             services.AddTransient<AdventureWorks2022>(_ => new AdventureWorks2022(connectionString));
 
+            services.Scan(scan => scan
+                .FromAssemblyOf<Program>()
+                .AddClasses(classes =>
+                    classes.Where(t => t.Name == "DiExample"))
+                .AsSelf()
+                .WithTransientLifetime());
             return services;
         }
 
+        //[ServiceDescriptor]
         public class DiExample
         {
+            // Generate md5 function 
+
             private AdventureWorks2022 db;
 
             public DiExample(AdventureWorks2022 db)
             {
                 this.db = db;
             }
+
+            // add a function that takes errors from results and adds it to the model's list of errors
+            
+
+
 
             public void Print()
             {
