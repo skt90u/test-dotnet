@@ -6,21 +6,25 @@ namespace TestTfsClient
 {
     public class TfsClient
     {
+        public static readonly string DefaultWorkspaceName = Environment.MachineName;
+
         public static void Test()
         {
             // https://github.com/microsoft/azure-devops-dotnet-samples
 
-            Uri uri = new Uri("http://localhost:7777");
+            Uri uri = new Uri("http://localhost:7777/DefaultCollection/");
 
-            TfsTeamProjectCollection tpc = new TfsTeamProjectCollection(uri);
+            // http://laptop-hr8bq31u:7777/DefaultCollection/
+            TfsTeamProjectCollection tpc = TfsTeamProjectCollectionFactory.GetTeamProjectCollection(uri);
+            // TfsTeamProjectCollection tpc = new TfsTeamProjectCollection(uri);
 
             VersionControlServer vcs = tpc.GetService<VersionControlServer>();
 
             // Workstation.Current.EnsureUpdateWorkspaceInfoCache(vcs, vcs.AuthorizedUser);
 
-            var ss = vcs.QueryWorkspaces("$/test-tfs", Environment.UserName, "");
+            var ss = vcs.QueryWorkspaces(DefaultWorkspaceName, null, null);
 
-            var w = vcs.GetWorkspace(@"D:\Projects\test-tfs\");
+            var w = vcs.GetWorkspace(@"D:\Projects\SampleProjectsWs1\");
 
             var a = 0;
 

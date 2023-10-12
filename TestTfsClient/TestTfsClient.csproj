@@ -41,29 +41,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.TeamFoundation.Client">
-      <HintPath>..\libs\Microsoft.TeamFoundation.Client.dll</HintPath>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Azure DevOps Server 2020\Tools\Microsoft.TeamFoundation.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.TeamFoundation.Common">
-      <HintPath>..\libs\Microsoft.TeamFoundation.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.Core.WebApi">
-      <HintPath>..\libs\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client">
-      <HintPath>..\libs\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common">
-      <HintPath>..\libs\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Services.Client.Interactive">
-      <HintPath>..\libs\Microsoft.VisualStudio.Services.Client.Interactive.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Services.Common">
-      <HintPath>..\libs\Microsoft.VisualStudio.Services.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Services.WebApi">
-      <HintPath>..\libs\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Azure DevOps Server 2020\Tools\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
