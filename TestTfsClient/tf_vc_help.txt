@@ -1,0 +1,141 @@
+﻿鍵入 tf vc help <命令名稱> 可查看命令列描述。
+鍵入 tf msdn <命令名稱>，可取得 Microsoft Document
+Explorer 中的完整文件。
+
+命令:
+tf vc add            從本機檔案系統位置，將新檔案與資料夾
+                     新增到 Team Foundation 版本控制。
+
+tf vc branch         將一或多個項目 (包括中繼資料與版本
+                     控制記錄)，從某處複製到 Team
+                     Foundation 版本控制伺服器及工作區上的其他
+                     位置。
+
+tf vc branches       顯示指定檔案或資料夾的分支
+                     記錄。
+
+tf vc changeset      顯示變更集的相關資訊，並讓您變更
+                     已建立關聯的屬性，例如註解及
+                     簽入提示。
+
+tf vc checkin        提交目前工作區中的暫止變更，並將其加入 Team
+                     Foundation 版本控制。
+
+tf vc checkout       使本機檔案變為可供寫入，並在工作區中將其暫止變更
+                     狀態變更為「編輯」。「編輯」是
+                     Checkout 命令的別名。
+
+tf vc certificates   設定在透過安全連線連線到 Azure DevOps 時，
+                     用戶端驗證憑證的用法。
+
+tf vc configure      允許系統管理員在 [原始檔控制設定] 對話方塊中，
+                     檢視及變更 Team 專案的下列
+                     組態設定:
+                     - 簽出設定
+                     - 簽入原則
+                     - 簽入提示
+
+tf vc delete         從 Team Foundation 版本
+                     控制中移除檔案與資料夾，並將其從磁碟中刪除。
+
+tf vc destroy        終結或永久刪除 Team Foundation 版本控制中，
+                     設有版本控制的檔案。
+
+tf vc diff           比較兩個檔案、兩個資料夾中的檔案，
+                     或是擱置集與本機或伺服器檔案，
+                     並在允許的情況下顯示兩者的差異。
+
+tf vc dir            顯示 Team Foundation 版本控制的
+                     全部或部分內容。
+
+tf vc folderdiff     以視覺化方式顯示兩個伺服器資料夾、
+                     伺服器資料夾與本機資料夾，
+                     或是兩個本機資料夾中之檔案的差異。
+
+tf vc get            從 Azure DevOps Server 擷取檔案的唯讀複本，
+                     再將其放入工作區，然後在磁碟上建立資料夾，
+                     以存放該複本。
+
+tf vc history        顯示一或多個檔案與資料夾的
+                     修訂記錄。
+
+tf vc info           顯示設有版本控制之項目的相關資訊。
+
+tf vc label          附加標籤至 Team Foundation 版本控制中檔案或資料夾的版本，
+                     或從中移除標籤。
+
+tf vc labels         顯示 Team Foundation 版本控制中的標籤
+                     清單。
+
+tf vc localversions  顯示工作區中一或多個項目的版本。
+
+tf vc lock           鎖定或解除鎖定檔案或資料夾，
+                     以拒絕或還原使用者簽出項目到
+                     不同工作區進行編輯，或從不同工作區簽入暫止變更至
+                     某個項目的權限。
+
+tf vc merge          將某分支的變更套用到其他分支。
+
+tf vc merges         顯示指定之來源與目的地分支間
+                     合併記錄的詳細資訊。
+
+tf vc msdn           啟動 Microsoft Document Explorer，以檢視命令的
+                     文件頁面。
+
+tf vc permission     修改使用者存取控制清單 (ACL)，
+                     並顯示設有版本控制之項目的授權設定。
+
+tf vc property       顯示並暫止與設有版本控制之
+                     項目建立關聯的屬性變更。
+
+tf vc reconcile      比較磁碟工作區的目前狀態與
+                     伺服器所示的目前狀態，
+                     以清除工作區或升級取消暫止的本機變更。
+
+tf vc rename         變更檔案或資料夾的名稱或路徑。
+                     您可以使用 rename 命令或 alias move，
+                     將檔案或資料夾移至新的位置。
+
+tf vc resolve        解析工作區內之已變更項目與
+                     伺服器上項目之最新或目的地版本間的
+                     衝突。
+
+tf vc resolvePath    將伺服器路徑解析為您工作區內的本機路徑。
+
+tf vc rollback       復原單一變更集或一系列變更集的
+                     變更。
+
+tf vc shelve         在 Azure DevOps Server 中儲存一組暫止變更，以及暫止簽入提示、
+                     註解及已建立關聯之
+                     工作項目的清單，而不確實將其
+                     簽入版本控制伺服器。
+
+tf vc shelvesets     顯示一組擱置變更的相關資訊。
+
+tf vc status         顯示一或多個工作區中項目的
+                     暫止變更資訊。
+
+tf vc undelete       還原先前刪除的項目。
+
+tf vc undo           從工作區移除暫止變更。
+
+tf vc unlabel        移除 Team Foundation 版本控制中
+                     移除項目的現有標籤。
+
+tf vc unshelve       還原擱置的檔案修訂、簽入提示、註解，
+                     以及與目前工作區的工作項目關聯性，
+                     或從伺服器移除現有的擱置集。
+
+tf vc view           擷取檔案的特定版本，
+                     然後將其放入您電腦上的暫存資料夾並加以顯示。
+
+tf vc workfold       建立、修改或顯示您工作區資料夾與
+                     Team Foundation 版本控制資料夾之間的
+                     對應資訊。
+
+tf vc workspace      建立、刪除、顯示或修改
+                     與工作區建立關聯的屬性與對應。
+
+tf vc workspaces     在 Azure DevOps Server上顯示系統中工作區旳資訊，並更新
+                     使用者名稱或電腦名稱變更的
+                     快取資訊。
