@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEntityFramework", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTfsClient", "TestTfsClient\TestTfsClient.csproj", "{E67EAFE7-E1CC-466D-97A6-897C344FD2CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReportingService", "TestReportingService\TestReportingService.csproj", "{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{E67EAFE7-E1CC-466D-97A6-897C344FD2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E67EAFE7-E1CC-466D-97A6-897C344FD2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E67EAFE7-E1CC-466D-97A6-897C344FD2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
