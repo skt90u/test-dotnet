@@ -89,7 +89,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="Reports\ReportData.Example用於設定可用資料集.png" />
+    <Content Include="Reports\01.ReportData.Example用於設定可用資料集.png" />
+    <Content Include="Reports\02.使用byte_array顯示圖片.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

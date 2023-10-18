@@ -6,19 +6,52 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.50333cm</Width>
+              <Width>5.31213cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.50333cm</Width>
+              <Width>5.31213cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.50333cm</Width>
+              <Width>5.31213cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.31438cm</Height>
+              <Height>2.62142cm</Height>
               <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>N01</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="Textbox7">
@@ -28,7 +61,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>N01</Value>
+                              <Value>S01</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -58,7 +91,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>N02</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -81,21 +114,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox11">
+                    <Textbox Name="Textbox16">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>N03</Value>
+                              <Value />
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <rd:DefaultName>Textbox16</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -112,7 +145,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.31438cm</Height>
+              <Height>2.62142cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -146,21 +179,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="N02">
+                    <Textbox Name="S01">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!N02.Value</Value>
+                              <Value>=Fields!S01.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>N02</rd:DefaultName>
+                      <rd:DefaultName>S01</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -176,24 +209,13 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="N03">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!N03.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>N03</rd:DefaultName>
+                    <Image Name="Image3">
+                      <Source>Database</Source>
+                      <Value>=Fields!B01.Value</Value>
+                      <MIMEType>image/png</MIMEType>
+                      <Sizing>Fit</Sizing>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -201,7 +223,56 @@
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
-                    </Textbox>
+                    </Image>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Tablix Name="Tablix4">
+                      <TablixBody>
+                        <TablixColumns>
+                          <TablixColumn>
+                            <Width>2.5cm</Width>
+                          </TablixColumn>
+                        </TablixColumns>
+                        <TablixRows>
+                          <TablixRow>
+                            <Height>2.62142cm</Height>
+                            <TablixCells>
+                              <TablixCell>
+                                <CellContents>
+                                  <Rectangle Name="Rectangle1">
+                                    <KeepTogether>true</KeepTogether>
+                                    <Style>
+                                      <Border>
+                                        <Style>None</Style>
+                                      </Border>
+                                    </Style>
+                                  </Rectangle>
+                                </CellContents>
+                              </TablixCell>
+                            </TablixCells>
+                          </TablixRow>
+                        </TablixRows>
+                      </TablixBody>
+                      <TablixColumnHierarchy>
+                        <TablixMembers>
+                          <TablixMember />
+                        </TablixMembers>
+                      </TablixColumnHierarchy>
+                      <TablixRowHierarchy>
+                        <TablixMembers>
+                          <TablixMember>
+                            <Group Name="Details2" />
+                          </TablixMember>
+                        </TablixMembers>
+                      </TablixRowHierarchy>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Tablix>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -213,6 +284,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -221,14 +293,15 @@
               <KeepWithGroup>After</KeepWithGroup>
             </TablixMember>
             <TablixMember>
-              <Group Name="詳細資料" />
+              <Group Name="Details1" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Details</DataSetName>
-        <Top>0.12912cm</Top>
-        <Height>2.62875cm</Height>
-        <Width>16.51cm</Width>
+        <Top>0.7747cm</Top>
+        <Left>0.57362cm</Left>
+        <Height>5.24283cm</Height>
+        <Width>18.43638cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -236,10 +309,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>6.72213in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>7.48425in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -259,53 +332,60 @@
       </ConnectionProperties>
       <rd:DataSourceID>87fe8f7b-e4c5-43b2-b69f-fe4bf389fe59</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="global">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>77215dc6-076e-42b2-90c6-feafdb0e5433</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="Details">
       <Query>
-        <DataSourceName>全域</DataSourceName>
+        <DataSourceName>global</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="N01">
           <DataField>N01</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N02">
           <DataField>N02</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N03">
           <DataField>N03</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N04">
           <DataField>N04</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N05">
           <DataField>N05</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N06">
           <DataField>N06</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N07">
           <DataField>N07</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N08">
           <DataField>N08</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N09">
           <DataField>N09</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="N10">
           <DataField>N10</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="S01">
           <DataField>S01</DataField>
@@ -347,9 +427,49 @@
           <DataField>S10</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="B01">
+          <DataField>B01</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B02">
+          <DataField>B02</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B03">
+          <DataField>B03</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B04">
+          <DataField>B04</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B05">
+          <DataField>B05</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B06">
+          <DataField>B06</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B07">
+          <DataField>B07</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B08">
+          <DataField>B08</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B09">
+          <DataField>B09</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="B10">
+          <DataField>B10</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>全域</rd:DataSetName>
+        <rd:DataSetName>global</rd:DataSetName>
         <rd:TableName>ReportData</rd:TableName>
         <rd:ObjectDataSourceSelectMethod>Example</rd:ObjectDataSourceSelectMethod>
         <rd:ObjectDataSourceType>ReportData, TestReportingService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
