@@ -16,7 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTfsClient", "TestTfsCli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReportingService", "TestReportingService\TestReportingService.csproj", "{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServiceBroker", "TestServiceBroker\TestServiceBroker.csproj", "{75BA90BD-6503-493D-AFF4-84BEEC8AF648}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFormAuth", "TestFormAuth\TestFormAuth.csproj", "{57902CFD-9280-4CA2-876F-3FB2D96E4452}"
+>>>>>>> 490e139c247b633f53b98082b0a145c0b08f3cb3
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,10 +44,17 @@ Global
 		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D33F3A3-F424-46C7-8BBE-B07B5A64705B}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{75BA90BD-6503-493D-AFF4-84BEEC8AF648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{75BA90BD-6503-493D-AFF4-84BEEC8AF648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75BA90BD-6503-493D-AFF4-84BEEC8AF648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75BA90BD-6503-493D-AFF4-84BEEC8AF648}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{57902CFD-9280-4CA2-876F-3FB2D96E4452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57902CFD-9280-4CA2-876F-3FB2D96E4452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57902CFD-9280-4CA2-876F-3FB2D96E4452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57902CFD-9280-4CA2-876F-3FB2D96E4452}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 490e139c247b633f53b98082b0a145c0b08f3cb3
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

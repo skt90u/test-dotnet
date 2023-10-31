@@ -15,16 +15,16 @@ public class ReportData
         return new List<ReportData>();
     }
 
-    public int N01 { get; set; }
-    public int N02 { get; set; }
-    public int N03 { get; set; }
-    public int N04 { get; set; }
-    public int N05 { get; set; }
-    public int N06 { get; set; }
-    public int N07 { get; set; }
-    public int N08 { get; set; }
-    public int N09 { get; set; }
-    public int N10 { get; set; }
+    public decimal N01 { get; set; }
+    public decimal N02 { get; set; }
+    public decimal N03 { get; set; }
+    public decimal N04 { get; set; }
+    public decimal N05 { get; set; }
+    public decimal N06 { get; set; }
+    public decimal N07 { get; set; }
+    public decimal N08 { get; set; }
+    public decimal N09 { get; set; }
+    public decimal N10 { get; set; }
 
     public string S01 { get; set; }
     public string S02 { get; set; }
@@ -36,4 +36,15 @@ public class ReportData
     public string S08 { get; set; }
     public string S09 { get; set; }
     public string S10 { get; set; }
+
+    public byte[] B01 { get; set; }
+    public byte[] B02 { get; set; }
+    public byte[] B03 { get; set; }
+    public byte[] B04 { get; set; }
+    public byte[] B05 { get; set; }
+    public byte[] B06 { get; set; }
+    public byte[] B07 { get; set; }
+    public byte[] B08 { get; set; }
+    public byte[] B09 { get; set; }
+    public byte[] B10 { get; set; }
 }

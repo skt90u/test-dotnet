@@ -18,6 +18,8 @@ namespace TestReportingService
                 //    new ReportParameter(name: "ReportParameter1", value: "SSS")
                 //});
 
+                var imagePath = @"D:\Projects\test-dotnet\TestReportingService\Reports\01.ReportData.Example用於設定可用資料集.png";
+
                 var details = new List<ReportData>();
 
                 for(var i=0; i<10; i++)
@@ -43,6 +45,8 @@ namespace TestReportingService
                         S08 = (i + 8).ToString(),
                         S09 = (i + 9).ToString(),
                         S10 = (i + 10).ToString(),
+
+                        B01 = GetImageByte(imagePath),
                     };
 
                     details.Add(detail);
@@ -52,6 +56,20 @@ namespace TestReportingService
                 //ReportViewer1.LocalReport.Refresh();
             }
             
+        }
+
+        private Dictionary<string, byte[]> imageDict = new Dictionary<string, byte[]>();
+
+        private byte[] GetImageByte(string imagePath)
+        {
+            if(!imageDict.ContainsKey(imagePath))
+            {
+                var bytes = System.IO.File.ReadAllBytes(imagePath);
+
+                imageDict.Add(imagePath, bytes);
+            }
+
+            return imageDict[imagePath];
         }
     }
 }
