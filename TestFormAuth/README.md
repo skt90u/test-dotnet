@@ -6,3 +6,7 @@ https://blog.darkthread.net/blog/mix-form-win-auth/
 
 ### ASP.NET 讀取使用者登入帳號：User.Identity vs LogonUserIdentity
 https://blog.darkthread.net/blog/user-identity-vs-logoinuseridentity/
+
+https://learn.microsoft.com/en-us/previous-versions/aspnet/bb398816(v=vs.100)
+https://learn.microsoft.com/en-us/previous-versions/bb383800(v=vs.100)?redirectedfrom=MSDN
+https://blog.csdn.net/Helloxiaovv/article/details/104922752
