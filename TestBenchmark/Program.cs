@@ -1,53 +1,53 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Running;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TestBenchmark
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<EmptyVSNewList>();
-
+            
+            var summary = BenchmarkRunner.Run<Md5VsSha256>();
         }
     }
 
-    /// <summary>
-    /// 協力單位，用來當成串列的填充物
-    /// </summary>
-    public class Foo
+    [SimpleJob(RuntimeMoniker.Net472, baseline: true)]
+    //[SimpleJob(RuntimeMoniker.NetCoreApp30)]
+    //[SimpleJob(RuntimeMoniker.NativeAot70)]
+    //[SimpleJob(RuntimeMoniker.Mono)]
+    [RPlotExporter]
+    public class Md5VsSha256
     {
-        public Guid Id { get; set; }
-        public string Bar1 { get; set; }
-        public string Bar2 { get; set; }
-        public string Bar3 { get; set; }
-        public string Bar4 { get; set; }
-        public string Bar5 { get; set; }
-    }
+        private SHA256 sha256 = SHA256.Create();
+        private MD5 md5 = MD5.Create();
+        private byte[] data;
 
-    /// <summary>
-    /// 測試用擂台
-    /// </summary>
-    public class EmptyVSNewList
-    {
-        // 紅方選手
-        [Benchmark]
-        public void Empty()
+        [Params(1000, 10000)]
+        public int N;
+
+        [GlobalSetup]
+        public void Setup()
         {
-            Enumerable.Empty<Foo>();
+            data = new byte[N];
+            new Random(42).NextBytes(data);
         }
 
-        // 藍方選手
         [Benchmark]
-        public void NewList()
+        public byte[] Sha256()
         {
-            new List<Foo>();
+            Console.WriteLine(DateTime.Now.ToString());
+            return sha256.ComputeHash(data);
         }
-    }
 
+        [Benchmark]
+        public byte[] Md5() => md5.ComputeHash(data);
+    }
 }
