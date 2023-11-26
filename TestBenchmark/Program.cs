@@ -14,8 +14,7 @@ namespace TestBenchmark
     {
         static void Main(string[] args)
         {
-            
-            var summary = BenchmarkRunner.Run<Md5VsSha256>();
+            BenchmarkRunner.Run<Md5VsSha256>();
         }
     }
 
@@ -41,11 +40,7 @@ namespace TestBenchmark
         }
 
         [Benchmark]
-        public byte[] Sha256()
-        {
-            Console.WriteLine(DateTime.Now.ToString());
-            return sha256.ComputeHash(data);
-        }
+        public byte[] Sha256() => sha256.ComputeHash(data);
 
         [Benchmark]
         public byte[] Md5() => md5.ComputeHash(data);
